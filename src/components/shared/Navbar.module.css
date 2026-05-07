@@ -1,0 +1,171 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(13, 10, 4, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--color-gold);
+  white-space: nowrap;
+}
+
+.logoIcon { font-size: 1.3rem; }
+
+.desktopLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex: 1;
+  justify-content: center;
+}
+
+@media (max-width: 768px) { .desktopLinks { display: none; } }
+
+.link {
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.link:hover { color: var(--color-text-primary); background: var(--color-bg-elevated); }
+.active { color: var(--color-gold) !important; background: var(--color-gold-muted) !important; }
+
+.authArea {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.adminBadge {
+  padding: 0.3rem 0.6rem;
+  background: rgba(96,165,250,0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(96,165,250,0.3);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.dashBtn {
+  padding: 0.4rem 0.9rem;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.dashBtn:hover { border-color: var(--color-gold); color: var(--color-gold); }
+
+.outBtn {
+  padding: 0.4rem 0.75rem;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.outBtn:hover { color: #f87171; border-color: rgba(248,113,113,0.4); }
+
+.loginBtn {
+  padding: 0.4rem 0.9rem;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.loginBtn:hover { border-color: var(--color-gold); color: var(--color-gold); }
+
+.registerBtn {
+  padding: 0.4rem 0.9rem;
+  background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
+  border-radius: var(--radius-md);
+  color: #0d0a04;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.registerBtn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(212,168,75,0.3); }
+
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+@media (max-width: 768px) { .menuToggle { display: block; } }
+@media (max-width: 480px) { .loginBtn, .registerBtn, .dashBtn, .outBtn, .adminBadge { display: none; } }
+
+/* Mobile menu */
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--color-border);
+  padding: 0.5rem;
+  background: var(--color-bg-dark);
+}
+
+@media (min-width: 769px) { .mobileMenu { display: none; } }
+
+.mobileLink {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: var(--transition);
+  text-align: right;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-family: inherit;
+}
+
+.mobileLink:hover { background: var(--color-bg-elevated); color: var(--color-text-primary); }
+.mobileLink.active { color: var(--color-gold); }
+.mobileDivider { height: 1px; background: var(--color-border); margin: 0.25rem 0; }
+.mobileSignOut { color: #f87171; }
+.mobileRegister { color: var(--color-gold); font-weight: 700; }

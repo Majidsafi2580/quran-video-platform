@@ -1,0 +1,86 @@
+/* ============================
+   CSS Variables (Design System)
+   ============================ */
+:root {
+  --color-bg-dark:     #0d0a04;
+  --color-bg-card:     #14100a;
+  --color-bg-elevated: #1c1710;
+  --color-border:      rgba(212,168,75,0.12);
+  --color-gold:        #d4a84b;
+  --color-gold-dark:   #b8893a;
+  --color-gold-muted:  rgba(212,168,75,0.1);
+  --color-text-primary:   #f5e6c8;
+  --color-text-secondary: #c4a882;
+  --color-text-muted:     #7a6548;
+  --color-success:   #4ade80;
+  --color-warning:   #fbbf24;
+  --color-error:     #f87171;
+  --radius-sm:  6px;
+  --radius-md:  10px;
+  --radius-lg:  14px;
+  --radius-xl:  20px;
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.3);
+  --shadow-gold: 0 0 30px rgba(212,168,75,0.08);
+  --transition:  all 0.2s ease;
+}
+
+/* ============================
+   Reset & Base
+   ============================ */
+*, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+html { font-size:16px; scroll-behavior:smooth; }
+body {
+  font-family: 'Cairo', 'Segoe UI', system-ui, sans-serif;
+  background: var(--color-bg-dark);
+  color: var(--color-text-primary);
+  direction: rtl;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+button { font-family: inherit; }
+input, select, textarea { font-family: inherit; color: inherit; }
+img { max-width:100%; }
+#root { min-height:100vh; }
+
+/* ============================
+   Arabic Fonts (@font-face)
+   ============================ */
+@font-face {
+  font-family: 'KFGQPC Uthmanic Script HAFS';
+  src: url('/fonts/KFGQPC Uthmanic Script HAFS Regular.otf') format('opentype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Amiri Quran';
+  src: url('/fonts/Amiri-Quran.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'UthmanTN1';
+  src: url('/fonts/alfont_com_UthmanTN1-Ver10.otf') format('opentype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PDMS Saleem Quran Font';
+  src: url('/fonts/_PDMS_Saleem_QuranFont Regular.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'me_quran';
+  src: url('/fonts/me_quran Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* ============================
+   Google Fonts preconnect hint
+   ============================ */
+/* Cairo loaded via <link> in index.html */
+
+/* ============================
+   Scrollbar
+   ============================ */
+::-webkit-scrollbar { width:5px; height:5px; }
+::-webkit-scrollbar-track { background: var(--color-bg-dark); }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius:99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-gold-dark); }

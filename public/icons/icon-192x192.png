@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="منصة توليد فيديوهات تلاوة القرآن الكريم بجودة عالية" />
+    <meta name="google" content="notranslate" />
+    <meta name="theme-color" content="#d4a84b" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="القرآن فيديو" />
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <!-- Arabic Font Support -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;500;600;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Lateef:wght@400;700&family=Traditional+Arabic&family=Playpen+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      /* Ensure proper font rendering on mobile */
+      * {
+        -webkit-text-size-adjust: 100%;
+      }
+      html {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+    <title>منصة فيديوهات القرآن الكريم</title>
+    <script type="module" crossorigin src="/assets/main-DGn71Ndn.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-Ctd0EGLK.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+.editor { display:flex; flex-direction:column; height:calc(100vh - 60px); overflow:hidden; background:var(--color-bg-dark); }
+
+.topBar { display:flex; align-items:center; justify-content:space-between; padding:0.6rem 1rem; background:var(--color-bg-card); border-bottom:1px solid var(--color-border); gap:0.75rem; flex-shrink:0; }
+.currentInfo { font-size:0.82rem; color:var(--color-text-secondary); }
+.noContent { font-size:0.82rem; color:var(--color-text-muted); }
+.exportQuickBtn { padding:0.4rem 1rem; background:linear-gradient(135deg,var(--color-gold),var(--color-gold-dark)); color:#0d0a04; border:none; border-radius:var(--radius-md); font-size:0.85rem; font-weight:700; cursor:pointer; white-space:nowrap; flex-shrink:0; transition:var(--transition); }
+.exportQuickBtn:hover { transform:translateY(-1px); box-shadow:0 4px 12px rgba(212,168,75,0.3); }
+
+.deviceBanner { padding:0.5rem 1rem; background:rgba(251,191,36,0.08); border-bottom:1px solid rgba(251,191,36,0.2); font-size:0.8rem; color:#fbbf24; text-align:center; flex-shrink:0; }
+
+.loadingOverlay { position:absolute; inset:0; background:rgba(13,10,4,0.85); z-index:50; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1rem; }
+.loadingSpinner { width:40px; height:40px; border:3px solid var(--color-border); border-top-color:var(--color-gold); border-radius:50%; animation:spin 0.8s linear infinite; }
+@keyframes spin { to { transform:rotate(360deg); } }
+.loadingOverlay p { color:var(--color-text-secondary); font-size:0.9rem; }
+
+.mainLayout { display:flex; flex:1; overflow:hidden; }
+
+/* Sidebar */
+.sidebar { width:340px; flex-shrink:0; display:flex; flex-direction:column; border-left:1px solid var(--color-border); background:var(--color-bg-card); overflow:hidden; }
+@media(max-width:900px) { .mainLayout { flex-direction:column; } .sidebar { width:100%; max-height:55vh; } }
+
+.tabNav { display:flex; border-bottom:1px solid var(--color-border); flex-shrink:0; }
+.tabBtn { flex:1; display:flex; flex-direction:column; align-items:center; gap:0.2rem; padding:0.55rem 0.25rem; background:none; border:none; cursor:pointer; color:var(--color-text-muted); font-size:0.9rem; transition:var(--transition); border-bottom:2px solid transparent; }
+.tabBtn:hover { color:var(--color-text-secondary); background:var(--color-bg-elevated); }
+.activeTab { color:var(--color-gold) !important; border-bottom-color:var(--color-gold) !important; background:var(--color-bg-elevated) !important; }
+.tabLabel { font-size:0.68rem; font-weight:600; }
+
+.tabContent { flex:1; overflow-y:auto; }
+.tabPanel { padding:1rem; display:flex; flex-direction:column; gap:1rem; }
+
+/* Form elements */
+.formGroup { display:flex; flex-direction:column; gap:0.4rem; }
+.label { font-size:0.82rem; font-weight:600; color:var(--color-text-secondary); }
+.searchInput { padding:0.6rem 0.8rem; background:var(--color-bg-elevated); border:1px solid var(--color-border); border-radius:var(--radius-md); color:var(--color-text-primary); font-size:0.875rem; transition:var(--transition); }
+.searchInput:focus { outline:none; border-color:var(--color-gold); }
+.selectInput { padding:0.6rem 0.8rem; background:var(--color-bg-elevated); border:1px solid var(--color-border); border-radius:var(--radius-md); color:var(--color-text-primary); font-size:0.85rem; cursor:pointer; }
+.numInput { width:65px; padding:0.45rem 0.5rem; background:var(--color-bg-elevated); border:1px solid var(--color-border); border-radius:var(--radius-sm); color:var(--color-text-primary); font-size:0.875rem; text-align:center; }
+.rangeSlider { width:100%; accent-color:var(--color-gold); cursor:pointer; }
+.textarea { padding:0.7rem 0.8rem; background:var(--color-bg-elevated); border:1px solid var(--color-border); border-radius:var(--radius-md); color:var(--color-text-primary); font-size:0.9rem; resize:vertical; direction:rtl; font-family:inherit; line-height:1.7; }
+.textarea:focus { outline:none; border-color:var(--color-gold); }
+
+/* Surah list */
+.surahList { max-height:220px; overflow-y:auto; border:1px solid var(--color-border); border-radius:var(--radius-md); }
+.surahItem { width:100%; display:flex; align-items:center; gap:0.5rem; padding:0.5rem 0.7rem; background:none; border:none; border-bottom:1px solid rgba(212,168,75,0.08); cursor:pointer; text-align:right; transition:var(--transition); }
+.surahItem:hover { background:var(--color-bg-elevated); }
+.selected { background:var(--color-gold-muted) !important; }
+.surahNum { font-size:0.7rem; color:var(--color-text-muted); width:24px; flex-shrink:0; }
+.surahName { flex:1; font-size:0.875rem; color:var(--color-text-primary); font-weight:600; }
+.surahVc { font-size:0.7rem; color:var(--color-text-muted); }
+.moreNote { padding:0.5rem; font-size:0.75rem; color:var(--color-text-muted); text-align:center; }
+
+/* Verse range */
+.verseRange { display:flex; align-items:center; gap:0.5rem; }
+.rangeItem { display:flex; align-items:center; gap:0.4rem; font-size:0.82rem; color:var(--color-text-secondary); }
+.rangeSep { color:var(--color-text-muted); }
+.verseCount { font-size:0.78rem; color:var(--color-gold); }
+
+/* Checks */
+.checkList { display:flex; flex-direction:column; gap:0.4rem; }
+.checkItem { display:flex; align-items:center; gap:0.5rem; font-size:0.85rem; color:var(--color-text-secondary); cursor:pointer; }
+.checkItem input { accent-color:var(--color-gold); }
+.disabledCheck { opacity:0.45; }
+.hint { font-size:0.72rem; color:var(--color-text-muted); }
+
+/* Upload */
+.uploadBtn { display:flex; align-items:center; justify-content:center; gap:0.5rem; padding:0.65rem; background:var(--color-bg-elevated); border:1px dashed var(--color-border); border-radius:var(--radius-md); font-size:0.85rem; color:var(--color-text-secondary); cursor:pointer; transition:var(--transition); text-align:center; }
+.uploadBtn:hover { border-color:var(--color-gold); color:var(--color-gold); }
+.uploadedFile { display:flex; align-items:center; justify-content:space-between; padding:0.5rem 0.75rem; background:var(--color-bg-elevated); border:1px solid var(--color-border); border-radius:var(--radius-md); font-size:0.82rem; color:var(--color-text-secondary); }
+.uploadedFile button { background:none; border:none; color:var(--color-text-muted); cursor:pointer; font-size:1rem; }
+.hintText { font-size:0.75rem; color:var(--color-text-muted); line-height:1.5; }
+
+/* Theme grid */
+.themeGrid { display:grid; grid-template-columns:repeat(5,1fr); gap:0.4rem; }
+.themeItem { aspect-ratio:1; border-radius:var(--radius-sm); cursor:pointer; display:flex; align-items:flex-end; justify-content:center; padding:0.2rem; transition:var(--transition); }
+.selectedTheme { box-shadow:0 0 0 3px var(--color-gold); }
+.fontPreview { font-size:1.1rem; direction:rtl; text-align:center; color:var(--color-gold); padding:0.5rem; background:var(--color-bg-elevated); border-radius:var(--radius-md); line-height:1.8; }
+.clearBtn { padding:0.3rem 0.6rem; background:var(--color-bg-elevated); border:1px solid var(--color-border); border-radius:var(--radius-sm); font-size:0.75rem; color:var(--color-text-muted); cursor:pointer; }
+
+/* Background tab */
+.bgTypeGrid { display:grid; grid-template-columns:repeat(4,1fr); gap:0.4rem; }
+.bgTypeBtn { display:flex; flex-direction:column; align-items:center; gap:0.2rem; padding:0.6rem 0.3rem; background:var(--color-bg-elevated); border:1.5px solid var(--color-border); border-radius:var(--radius-md); cursor:pointer; font-size:0.75rem; color:var(--color-text-secondary); transition:var(--transition); }
+.bgTypeBtn:hover { border-color:var(--color-gold); color:var(--color-gold); }
+.activeBgType { border-color:var(--color-gold) !important; color:var(--color-gold) !important; background:var(--color-gold-muted) !important; }
+.gradientGrid { display:grid; grid-template-columns:repeat(4,1fr); gap:0.4rem; }
+.gradientItem { aspect-ratio:1; border-radius:var(--radius-sm); cursor:pointer; position:relative; display:flex; align-items:flex-end; justify-content:center; padding:0.15rem; border:2px solid transparent; transition:var(--transition); }
+.selectedGradient { border-color:var(--color-gold) !important; box-shadow:0 0 0 2px var(--color-gold); }
+.lockedGradient { opacity:0.6; }
+.vipLock { position:absolute; top:2px; right:2px; font-size:0.65rem; }
+.vipTag { font-size:0.7rem; color:var(--color-gold); margin-right:0.3rem; }
+.vipLockBox { padding:0.75rem; background:rgba(212,168,75,0.08); border:1px solid var(--color-gold-dark); border-radius:var(--radius-md); font-size:0.82rem; color:var(--color-gold); }
+.vipLockBox a { text-decoration:underline; }
+.bgPreview { position:relative; }
+.removeBtn { margin-top:0.4rem; padding:0.35rem 0.75rem; background:rgba(248,113,113,0.1); border:1px solid rgba(248,113,113,0.3); border-radius:var(--radius-sm); color:#f87171; font-size:0.78rem; cursor:pointer; }
+
+/* Sync tab */
+.syncInfo { font-size:0.85rem; color:var(--color-text-secondary); text-align:center; padding:0.5rem; background:var(--color-bg-elevated); border-radius:var(--radius-md); }
+.audioPlayer { width:100%; border-radius:var(--radius-md); }
+.currentVerse { padding:1rem; background:var(--color-bg-elevated); border:1px solid var(--color-border); border-radius:var(--radius-md); text-align:center; }
+.verseNum { font-size:0.75rem; color:var(--color-gold); margin-bottom:0.5rem; }
+.verseText { font-size:1.2rem; direction:rtl; line-height:2; color:var(--color-text-primary); }
+.syncProgress { font-size:0.82rem; color:var(--color-text-muted); }
+.progressBarSmall { height:4px; background:var(--color-bg-elevated); border-radius:99px; margin-top:0.4rem; overflow:hidden; }
+.progressFill { height:100%; background:var(--color-gold); border-radius:99px; transition:width 0.3s; }
+.syncActions { display:flex; gap:0.75rem; }
+.syncBtn { flex:1; padding:0.65rem; background:linear-gradient(135deg,var(--color-gold),var(--color-gold-dark)); color:#0d0a04; border:none; border-radius:var(--radius-md); font-size:0.9rem; font-weight:700; cursor:pointer; transition:var(--transition); }
+.syncBtn:hover { transform:translateY(-1px); }
+.undoBtn { padding:0.65rem 1rem; background:var(--color-bg-elevated); border:1px solid var(--color-border); border-radius:var(--radius-md); color:var(--color-text-secondary); cursor:pointer; font-size:0.85rem; transition:var(--transition); }
+.undoBtn:disabled { opacity:0.4; cursor:not-allowed; }
+.emptyState { display:flex; flex-direction:column; align-items:center; gap:0.75rem; padding:2rem; color:var(--color-text-muted); }
+.emptyState span { font-size:2rem; }

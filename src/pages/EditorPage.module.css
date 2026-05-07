@@ -1,0 +1,10 @@
+.editorPage { display:flex; flex-direction:column; height:100vh; background:var(--color-bg-dark); overflow:hidden; }
+.editorNav { display:flex; align-items:center; justify-content:space-between; padding:0 1.25rem; height:52px; background:var(--color-bg-card); border-bottom:1px solid var(--color-border); flex-shrink:0; gap:0.75rem; }
+.backBtn { display:flex; align-items:center; gap:0.4rem; color:var(--color-text-muted); text-decoration:none; font-size:0.85rem; transition:var(--transition); white-space:nowrap; }
+.backBtn:hover { color:var(--color-gold); }
+.navTitle { display:flex; align-items:center; gap:0.5rem; font-size:0.9rem; font-weight:700; color:var(--color-text-primary); }
+.navIcon { font-size:1.1rem; }
+.navLinks { display:flex; gap:0.5rem; }
+.navLinks a { padding:0.35rem 0.75rem; background:var(--color-bg-elevated); border:1px solid var(--color-border); border-radius:var(--radius-md); font-size:0.8rem; color:var(--color-text-secondary); text-decoration:none; transition:var(--transition); white-space:nowrap; }
+.navLinks a:hover { border-color:var(--color-gold); color:var(--color-gold); }
+@media(max-width:480px) { .navLinks { display:none; } }

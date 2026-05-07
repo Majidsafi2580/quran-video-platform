@@ -1,0 +1,16 @@
+{
+  "name": "منصة القرآن للفيديو",
+  "short_name": "قرآن فيديو",
+  "description": "أنشئ فيديوهات قرآنية احترافية",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d0a04",
+  "theme_color": "#d4a84b",
+  "lang": "ar",
+  "dir": "rtl",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ],
+  "categories": ["education", "religion"]
+}
