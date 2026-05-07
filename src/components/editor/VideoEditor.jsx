@@ -388,7 +388,6 @@ function ContentTab({
   );
 }
 
-function basmalaAllowed(n) { return n !== 1 && n !== 9; }
 
 // ── Design Tab ───────────────────────────────────────────────────
 function DesignTab({ theme, fontId, fontSize, fontColor, textShadow, onThemeChange, onFontChange, onFontSizeChange, onFontColorChange, onTextShadowChange }) {
