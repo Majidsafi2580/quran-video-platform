@@ -52,8 +52,8 @@ export default function HomePage() {
               </Link>
             )}
             {user && (
-              <Link to="/dashboard" className={styles.heroSecondary}>
-                👤 لوحة التحكم
+              <Link to="/admin" className={styles.heroSecondary}>
+                   👤 لوحة التحكم
               </Link>
             )}
           </div>
